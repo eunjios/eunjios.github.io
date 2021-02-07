@@ -126,7 +126,8 @@ blockquote {
 /* links */
 
 a {
-  text-decoration-color : $footer-background-color;
+   text-decoration : underline black dotted 3px
+   
   &:focus {
     @extend %tab-focus;
   }
