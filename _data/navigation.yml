@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "👩🏻‍💻"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    url: /about/
   - title: "📋"
     url: /categories/
   # - title: "Sample Posts"
