@@ -1,11 +1,11 @@
 ---
-title: "👩🏻‍💻 About Me"
+title: "About Me"
 permalink: /about/
 layout: single
 author_profile: true
 ---
 
-Hi!👋 I am Eunji Lee. This blog is to record projects and study swift.
+Hi! I am Eunji Lee. This blog is to record projects and study swift.
 
 ## Interests
 * iOS
