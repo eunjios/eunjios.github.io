@@ -4,8 +4,6 @@ permalink: /about/
 layout: single
 ---
 
-## Eunji Lee
-
 Hi! I am Eunji Lee. This blog is to record projects and study swift.
 
 ## Interests
