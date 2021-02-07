@@ -126,7 +126,7 @@ blockquote {
 /* links */
 
 a {
-   text-decoration : underline black dotted 3px
+   text-decoration : underline black dotted 3px ;
    
   &:focus {
     @extend %tab-focus;
