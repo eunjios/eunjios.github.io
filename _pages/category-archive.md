@@ -1,5 +1,5 @@
 ---
-title: "Posts organized by category"
+title: "Posts"
 layout: categories
 permalink: /categories/
 author_profile: true
