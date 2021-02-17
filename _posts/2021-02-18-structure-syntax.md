@@ -172,7 +172,7 @@ extension Int {
 ```swift
 let value = 2
 value.square()		// 4
-3.square()			// 9
+3.square()		// 9
 ```
 
 <br>
