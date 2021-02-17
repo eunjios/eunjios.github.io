@@ -15,6 +15,6 @@ Hi! I am Eunji Lee. This blog is for studying iOS development and recording proj
 
 ## Education
 **Sookmyung Women's University**, Seoul, Republic of Korea _(Mar 2018 - Present)_
-* Major in electronic engineering.
+* Major in electronic engineering
 * GPA 4.41/4.5
 
