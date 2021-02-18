@@ -1,5 +1,5 @@
 ---
-title: "[Swift/iOS] Structure (구조체) 문법 정리"
+title: "[Swift] Structure (구조체) 문법 정리"
 excerpt: "구조체의 문법을 정리해보자."
 date: 2021-02-18 01:34:00 -0400
 category: Syntax
