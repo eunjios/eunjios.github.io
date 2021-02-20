@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 
-Hi! I am Eunji Lee. This blog is for studying iOS development and recording projects.
+Hi! 👋 I am Eunji Lee. This blog is for studying iOS development and recording projects.
 
 ## Interests
 * iOS
