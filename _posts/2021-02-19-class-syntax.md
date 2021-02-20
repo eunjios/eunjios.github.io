@@ -146,6 +146,115 @@ printStudentInfo(student)
 ```
 이런 식으로 함수의 인풋 타입을 클래스로 지정해줄 수도 있습니다.
 
+<br>
+
+## 5. 클래스를 상속받기
+클래스를 생성할 때 다른 클래스를 상속 받아서 사용할 수도 있습니다. 스위프트의 상속의 몇 가지 규칙을 정리해보면 다음과 같습니다.
+* 클래스만 상속을 받을 수 있고 구조체는 상속 불가능
+* 서브 클래스는 하나의 슈퍼 클래스만 상속 받을 수 있음
+* 슈퍼 클래스는 여러개의 서브 클래스를 가질 수 있음
+* 상속의 깊이는 상관 없음
+
+슈퍼 클래스로부터 상속을 받는 법은 간단합니다. 클래스를 생성할 때 `: SuperClassName` 만 추가하면 됩니다.
+```swift
+class SubClassName: SuperClassName {
+	// 구현부 
+}
+```
+
+이제 어떻게 상속을 받는지 알았으니까 예시를 들어볼까요?
+
+먼저 슈퍼 클래스인 `Person` 을 만들어 봅시다. (동일하게 클래스를 생성하면 됩니다.)
+
+```swift
+class Person {
+	var firstName: String
+	var lastName: String
+	
+	init(firstName: String, lastName: String) {
+		self.firstName = firstName
+		self.lastName = lastName
+	}
+
+	func printMyName(){
+		print("my name is \(firstName) \(lastName)")
+	}
+}
+```
+이번에는 `Person` 클래스를 상속받는 `대학생` 이라는 클래스를 만들어 볼까요? (스위프트는 유니코드를 지원하기 때문에 이름을 정할 때 한글로 정해도 됩니다.)
+```swift
+class 대학생: Person {
+	var univName: String
+	var major: String
+
+	init(firstName: String, lastName: String, univName: String, major: String) {
+		self.univName = univName
+		self.major = major
+		super.init(firstName: firstName, lastName: lastName)
+	}
+}
+```
+잠깐 복습하면 초기값 설정을 안 해줬기 때문에 `init()` 을 사용해야 하는 것 인데요. 
+
+**여기서 주의할 점!!** `대학생` 클래스가 상속받은 `Person` 이라는 클래스도 생성자가 있었기 때문에 `init()`  내부에 `super.init()` 도 필수적으로 설정해줘야 합니다.
+
+여기까지 하면 `대학생` 클래스는 성공적으로 `Person` 클래스를 상속 받을 수 있습니다. 즉, `Person` 클래스 내부에 있던 프로퍼티와 메소드를 모두 사용할 수 있는거죠. 그럼 이제 인스턴스를 생성해볼까요?
+
+```swift
+let someOne = 대학생(firstName: "Name", lastName: "Lee", univName: "univ", major: "major")
+
+print(someOne.firstName)	// Name
+print(someOne.univName)		// univ
+someOne.printMyName()		// my name is Name Lee
+```
+<br>
+
+### 👀 조금 더 어려운 걸 해봅시다.
+이번에는 `대학생` 클래스에 GPA 를 나타내는 배열을 프로퍼티로 추가해 볼 예정인데요. 이전 시간에 구조체를 배웠으니까, 배열의 값은 학기와 GPA 데이터를 갖는 구조체로 만들어 봅시다. 
+
+1. 먼저 `GPABySemester` 라는 구조체를 생성해 줍니다.
+	```swift
+	struct GPABySemester {
+		var semester: Int
+		var gpa: Double
+	}
+	```
+	참고로 구조체는 생성자가 없어도 됩니다. 저절로 memberwise initializer 가 생성되기 때문입니다.
+
+2. `대학생` 클래스에 `gpa` 프로퍼티를 추가합니다. 이 때   `GPABySemester` 의 타입을 가지는 빈 배열로 설정해줍시다. 초기값을 줌으로써 `생성자(init)` 를 사용할 필요가 없습니다! *(편의상 다른 프로퍼티는 다 생략 했습니다.)*
+	```swift
+	class 대학생: Person {
+		var gpa: [GPABySemester] = []
+	}
+	```
+3. `대학생` 클래스의 인스턴스를 생성합니다.
+	```swift
+	let someStudent = 대학생(firstName: "Name", lastName: "Lee")
+	```
+4. `GPAByGrade` 구조체의 인스턴스를 생성합니다.
+	```swift
+	let firstGPA = GPABySemester(semester: 1, gpa: 4.4)
+	let secondGPA = GPABySemester(semester: 2, gpa: 4.5)
+	let thirdGPA = GPABySemester(semester: 3, gpa: 4.0)
+	```
+5. 위의 인스턴스들을 `someStudent` 의 `gpa` 배열에 추가해주면?
+	```swift
+	someStudent.gpa.append(firstGPA)
+	someStudent.gpa += [sencondGPA, thirdGPA]
+	```
+	저는 한 번 두가지 경우로 배열을 추가해 보았습니다. 참고로 여기서 `someStudent` 는 `let` 키워드를 사용하여 생성 했는데, 잘못 된 거 아니냐? 생각할 수 있지만, 이는 클래스의 인스턴스기 때문에 내부의 가변 프로퍼티 값을 바꿀 수 있는 것 입니다.
+<br>
+
+### 🤔 상속을 언제 어떻게 써야 할까?
+상속은 중복되는 코드를 줄일 수 있다는 점에서 좋습니다. 그렇지만 너무 많이 써서 상속의 깊이가 너무 깊어진다면 유지보수가 힘들어진다는 단점이 있습니다. 그럼 상속을 언제 어떻게 써야 할까요?
+
+1. 부모/자식 클래스를 명확히 구분해야 할 때 상속을 사용하자.
+2. 객체 자체의 정체성을 구현하고 싶을 때 부모 클래스로부터 상속 받아 객체를 만들자.
+3. 비슷하지만 다른 내용을 다룰 때 상속을 고려하여 다양한 구현을 가능하게 하자.
+4. 외부 앱에서 필요로 할 때, 즉 확장성이 필요할 때 상속을 사용하자.
+5. 각 클래스는 한 개의 고려 사항만 있도록하여 정확한 정체성을 갖게 하자. 너무 많은 걸 하나의 클래스가 사용하려고 하면 안된다. (유지보수에 어려움)
+
+
 <hr>
 
 그럼 오늘은 여기까지 문법을 정리하고, 다음 시간에는 구조체와 클래스의 차이를 중점적으로 포스팅 하겠습니다. 🤓
