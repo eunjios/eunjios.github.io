@@ -3,15 +3,15 @@
 --- 
 
 // https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/#customizing
-$sans-serif: 'Noto Serif KR', serif;
-$monospace: 'Ubuntu Mono';
+$sans-serif: 'Noto Sans KR';
+$monospace: 'Source Code Pro';
 $type-size-4-5: 1.12em !default; // Ubuntu Mono is a bit small
 
 @charset "utf-8";
 @import "minimal-mistakes/skins/dirt"; // skin
 @import "minimal-mistakes";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Source+Code+Pro&display=swap');
 
 // https://github.com/mmistakes/minimal-mistakes/issues/1219
 html {
@@ -33,10 +33,11 @@ html {
 .highlight {
   font-family: $monospace;
   font-size: $type-size-4-5;
+  background: #42403c;
 }
 
 .language-plaintext {
   font-family: $monospace;
   font-size: $type-size-5;
-  background: #c0ffee;
+  background: #ada89e;
 }
