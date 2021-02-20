@@ -11,7 +11,7 @@ $type-size-4-5: 1.00em !default; // Ubuntu Mono is a bit small
 @import "minimal-mistakes/skins/dirt"; // skin
 @import "minimal-mistakes";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;&family=Source+Code+Pro&display=swap');
 
 // https://github.com/mmistakes/minimal-mistakes/issues/1219
 html {
@@ -37,7 +37,7 @@ html {
 
 .language-plaintext {
   font-family: $monospace;
-  font-size: 1.00em;
+  font-size: 0.90em;
   background: #e0e0e0;
 }
 
