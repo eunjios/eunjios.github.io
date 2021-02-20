@@ -1,11 +1,11 @@
 # main links
 main:
-  - title: "👩🏻‍💻"
-    url: /about/
   - title: "📋"
     url: /categories/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
+  - title: "🚀"
+    url: /projects/
+  - title: "👩🏻‍💻"
+    url: /about/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
