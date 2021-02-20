@@ -1,0 +1,42 @@
+--- 
+# Only the main Sass file needs front matter (the dashes are enough) 
+--- 
+
+// https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/#customizing
+$sans-serif: 'Nanum Myeongjo';
+$monospace: 'Source Code Pro';
+$type-size-4-5: 1.00em !default; // Ubuntu Mono is a bit small
+
+@charset "utf-8";
+@import "minimal-mistakes/skins/dirt"; // skin
+@import "minimal-mistakes";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Source+Code+Pro:wght@300&display=swap');
+
+// https://github.com/mmistakes/minimal-mistakes/issues/1219
+html {
+  font-size: 13px; // change to whatever
+  
+  @include breakpoint($medium) {
+    font-size: 13px; // change to whatever
+  }
+
+  @include breakpoint($large) {
+    font-size: 20px; // change to whatever
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 22px; // change to whatever
+  }
+}
+
+.highlight {
+  font-family: $monospace;
+  font-size: $type-size-4-5;
+}
+
+.language-plaintext {
+  font-family: $monospace;
+  font-size: 0.90em;
+  background: #e0e0e0;
+}
