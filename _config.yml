@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "Eunji Lee"
   avatar           : "/assets/author_icon.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Record growing up as an iOS developer"
+  bio              : "Record growing up as an \n iOS developer"
   location         : "South Korea"
   email            :
   links:
