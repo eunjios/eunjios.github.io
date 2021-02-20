@@ -63,6 +63,7 @@ mutableInstance.mutableProperty = 20
 ```swift
 var mutableInstance = SomeStructName(mutableProperty: 20)
 ```
+
 <br>
 
 ### `let` 키워드를 사용하여 인스턴스 생성하기
