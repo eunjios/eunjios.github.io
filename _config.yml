@@ -96,9 +96,9 @@ analytics:
 author:
   name             : "Eunji Lee"
   avatar           : "/assets/author_icon.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Record growing up as an \n iOS developer"
+  bio              : "iOS developer?"
   location         : "South Korea"
-  email            :
+  email            : "eunjios.dev@gamil.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
