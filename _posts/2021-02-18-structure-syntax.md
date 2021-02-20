@@ -5,7 +5,7 @@ date: 2021-02-18 01:34:00 -0400
 category: Syntax
 ---
 
-> CATEGORY - Syntax
+> CATEGORY - Syntax  
 > 스위프트 문법을 정리합니다. 
 
 # 📌 Structure (구조체) 란?
