@@ -15,12 +15,12 @@ category: Syntax
 
 ## 0. 문법 정리하며 달랐던 점을 정리해보자.
 
-| |구조체|클래스|
-|---|---|---|
-|initializer|initializer가 없어도 가능|initailizer 필수|
-|mutating|구조체 내부의 프로퍼티의 값을 바꾸기 위해선 mutating 필수|클래스 내부의 프로퍼티 값을 바꿔도 mutating 사용할 필요 없음|
-|let 인스턴스|가변 프로퍼티여도 값을 바꿀 수 없음|가변 프로퍼티면 값을 바꿀 수 있음|
-|상속|불가능|가능|
+|  | 구조체 | 클래스 |
+| --- | --- | --- |
+| initializer | initializer가 없어도 가능 | initailizer 필수 |
+| mutating | 구조체 내부의 프로퍼티의 값을 바꾸기 위해선 mutating 필수 | 클래스 내부의 프로퍼티 값을 바꿔도 mutating 사용할 필요 없음 |
+| let 인스턴스 | 가변 프로퍼티여도 값을 바꿀 수 없음 | 가변 프로퍼티면 값을 바꿀 수 있음 |
+| 상속 | 불가능 | 가능 |
 <br>
 <br>
 
