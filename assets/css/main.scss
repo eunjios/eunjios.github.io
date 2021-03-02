@@ -3,7 +3,7 @@
 --- 
 
 // https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/#customizing
-$sans-serif: 'Noto Serif KR', 'Noto Sans KR';
+$sans-serif: 'Noto Sans KR';
 $monospace: 'Source Code Pro';
 $type-size-4-5: 1.00em !default; // Ubuntu Mono is a bit small
 
@@ -11,7 +11,7 @@ $type-size-4-5: 1.00em !default; // Ubuntu Mono is a bit small
 @import "minimal-mistakes/skins/dirt"; // skin
 @import "minimal-mistakes";
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&family=Noto+Serif+KR:wght@200;300&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;500;700;900&family=Noto+Serif+KR:wght@200;300&family=Source+Code+Pro&display=swap');
 // https://github.com/mmistakes/minimal-mistakes/issues/1219
 html {
   font-size: 14px; // change to whatever
