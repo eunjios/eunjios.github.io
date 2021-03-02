@@ -53,7 +53,7 @@ class SomeClassName {
 ```swift
 class SomeClassName {
 	var a: Int			// init 필수
-	var b: Int = 1		// init 해도 되고 안해도 됨 
+	var b: Int = 1			// init 해도 되고 안해도 됨 
 	let c: Int			// init 필수
 
 	init(a: Int, c: Int) {
