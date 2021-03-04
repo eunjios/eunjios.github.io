@@ -80,8 +80,8 @@ category: Syntax
 
 1. `Table View` 에 표시될 title 과 content 를 배열로 만들어 봅시다. (코드 위치는 `View Controller` 내부)
 	```swift
-		let memoTitle = ["오늘 먹은 음식", "커피", "맛집 추천", "오늘 할 일", "과제", "스터디 날짜"]
-		let memoContent = ["등촌칼국수, 너무 맛있다!!", "오늘은 커피를 안 마셨다.", "마늘 닭볶음탕 먹어보고 싶다. 궁금해", "오늘 테이블 뷰 블로그에 업로드하기 목표", "휴학해서 과제 없다. 부럽지", "매주 월요일 오후 4시에 시작합니다."]
+	let memoTitle = ["오늘 먹은 음식", "커피", "맛집 추천", "오늘 할 일", "과제", "스터디 날짜"]
+	let memoContent = ["등촌칼국수, 너무 맛있다!!", "오늘은 커피를 안 마셨다.", "마늘 닭볶음탕 먹어보고 싶다. 궁금해", "오늘 테이블 뷰 블로그에 업로드하기 목표", "휴학해서 과제 없다. 부럽지", "매주 월요일 오후 4시에 시작합니다."]
 	```
 	
 2. 끝!
@@ -136,6 +136,7 @@ category: Syntax
 		return cell
 	}
 	```
+	
 	* `cell` 을 `CustomCell` 로 캐스팅하여, 존재하는 경우는 `cell` 을 반환, 존재하지 않는 경우에는 `UITableViewCell()` 을 반환합니다.
 
 	* 여기서 `withIdentifier` 값을 이전에 설정해둔 `Table View Cell` 의 Identifier 와 동일하게 설정해야 합니다.
