@@ -110,6 +110,8 @@ category: Syntax
 	}
 	```
 	* 그 외의 메서드를 추가하고 싶다면? 
+
+
 	* `Jump to Definition` 을 클릭하여 다양한 메서드들이 뜨니까 원하는 메서드를 사용하면 됩니다.
 
 <br>
@@ -126,21 +128,16 @@ category: Syntax
 	2. 각 row 에 나타낼 cell 설정하기
 	```swift
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CustomCell else {
 			return UITableViewCell()	
 		}
-		
 		cell.labelTitle.text = memoTitle[indexPath.row]
 		cell.labelContent.text = memoContent[indexPath.row]
 		return cell
 	}
 	```
-	
 	* `cell` 을 `CustomCell` 로 캐스팅하여, 존재하는 경우는 `cell` 을 반환, 존재하지 않는 경우에는 `UITableViewCell()` 을 반환합니다.
-
 	* 여기서 `withIdentifier` 값을 이전에 설정해둔 `Table View Cell` 의 Identifier 와 동일하게 설정해야 합니다.
-
 	<br>
 
 	3. (선택) 높이를 지정하기 
