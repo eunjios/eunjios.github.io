@@ -33,7 +33,9 @@ category: Syntax
 1. 스토리보드의 `+`  버튼을 누릅니다.
 
 2. `table` 을 검색합니다.
+
 3. `Table View` 를 드래그해서 화면에 추가합니다.
+
 4. `Table View Cell` 을 드래그하여 `Table View` 내부에 추가합니다.
 
 <br>
@@ -46,6 +48,7 @@ category: Syntax
 1. `Table view` 를 클릭 후, `View Controller` 에 `ctrl + drag` 합니다. (파란색 화살표가 나옵니다.)
 
 2. `DataSource` 와 `Delegate` 를 선택합니다.
+
 3. 끝!
 
 `Table View` 의 `dataSource` 와 `delegate` 를 `View Controller` 로 설정합니다. 즉, 테이블 뷰의 외형 (row 개수, row 높이 등등)과 눌렀을 때 어떻게 동작할지 등을 뷰 컨트롤러가 담당하는 것 입니다.
@@ -61,7 +64,7 @@ category: Syntax
 
 1. 스토리보드에서 `Label` 을 추가합니다. (또는 `Image View` 를 넣어도 상관 없습니다.)
 
-3. Custom 클래스를 하나 만듭니다. 이 때, `UITableViewCell` 을 상속 받도록 합니다.
+2. Custom 클래스를 하나 만듭니다. 이 때, `UITableViewCell` 을 상속 받도록 합니다.
 	```swift
 	class CustomCell: UITableViewCell {
 		@IBOutlet weak var labelTitle: UILabel!
@@ -70,9 +73,11 @@ category: Syntax
 	```
 
 3. 스토리보드의 `Inspectors` 에서 `Identity inspector` 로 들어가보면, 해당 `Table View` 의 클래스를 설정할 수 있는데요. 이를 위에 만들었던 클래스인 `CustomCell` 로 설정합니다.
+
 4. `ctrl + drag` 로 outlet 을 연결해줍니다.
+
 5. 마지막으로 `Table View Cell` 의 `Identifier` 를 cell 로 설정해 줍니다. (나중에 필요해요)
-	![](https://user-images.githubusercontent.com/77034159/109917660-0bb45280-7cf9-11eb-9ba1-8ee90df57c54.png")
+![](https://user-images.githubusercontent.com/77034159/109917660-0bb45280-7cf9-11eb-9ba1-8ee90df57c54.png")
 
 <br>
 <br>
@@ -192,10 +197,12 @@ category: Syntax
 1. 스토리보드에서 `Label` 을 추가합니다.
 
 2. 제목은 스토리보드에서 `text` 속성을 설정해 줍니다.
+
 3. 메모의 개수를 나타내는 `Label` 은 아웃렛변수로 선언해 줍니다.
 	```swift
 	@IBOutlet weak var countLabel: UILabel!
 	```
+
 4.  `text` 속성은 `viewDidLoad()` 에 다음과 같이 설정합니다.
 	```swift
 	self.countLabel.text = "총 \(memoTitle.count) 개의 메모가 있습니다."
