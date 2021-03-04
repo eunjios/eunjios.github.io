@@ -15,17 +15,18 @@ category: Syntax
 # 🤔 테이블 뷰가 뭔데?
 테이블 뷰는 다양한 앱에서 (거의) 필수적으로 사용되고, 쉽게 볼 수 있는 화면인데요. 아이폰의 메시지, 아이폰의 메모, 카카오톡, 인스타그램 등 매우 많은 앱에서 볼 수 있습니다.
 
-바로 이런 화면이 테이블 뷰를 사용한 화면들 입니다.
+아래 예시를 볼까요?
 
 ![](https://user-images.githubusercontent.com/77034159/109977141-dbdc6d80-7d3f-11eb-8dcc-7d397ee658c6.JPEG)
 
-위 화면처럼 비슷한 셀들이 아래로 주르륵 나열되어 있는 화면이 테이블 뷰 입니다. 즉, 메모장이나, 채팅, 장바구니 화면 등 다양한 기능을 구현하기 위해선 필수적인 뷰 입니다!
+위 예시처럼 비슷한 셀들이 아래로 주르륵 나열되어 있는 화면이 테이블 뷰 라고 생각하면 됩니다. 메모장이나, 채팅, 장바구니 화면 등 다양한 기능을 구현하기 위해선 필수적인 뷰 입니다!
 
 <br>
 
 # 🔨 테이블 뷰, 어떻게 만들지?
+이번에는 테이블 뷰를 만드는 방법에 대해 살펴보도록 하겠습니다.
 
-## 1. 스토리보드에서 Table View, Table View Cell 을 추가하자
+## 1. 스토리보드에서 Table View, Table View Cell 을 추가
 
 ![](https://user-images.githubusercontent.com/77034159/109910537-ae65d480-7ceb-11eb-9000-65f9152823f3.gif)
 
@@ -38,7 +39,7 @@ category: Syntax
 <br>
 <br>
 
-## 2. DataSource 와 Delegate 를 View Controller 로 설정하기
+## 2. DataSource 와 Delegate 를 View Controller 로 설정
 
 ![](https://user-images.githubusercontent.com/77034159/109911652-cd656600-7ced-11eb-84ec-94a3c47e7b3a.gif)
 
@@ -59,7 +60,8 @@ category: Syntax
 ![](https://user-images.githubusercontent.com/77034159/109915272-ddcd0f00-7cf4-11eb-8a4a-088609bac88a.gif)
 
 1. 스토리보드에서 `Label` 을 추가합니다. (또는 `Image View` 를 넣어도 상관 없습니다.)
-2. Custom 클래스를 하나 만듭니다. 이 때, `UITableViewCell` 을 상속 받도록 합니다.
+
+3. Custom 클래스를 하나 만듭니다. 이 때, `UITableViewCell` 을 상속 받도록 합니다.
 	```swift
 	class CustomCell: UITableViewCell {
 		@IBOutlet weak var labelTitle: UILabel!
@@ -111,7 +113,6 @@ category: Syntax
 	```
 	* 그 외의 메서드를 추가하고 싶다면? 
 
-
 	* `Jump to Definition` 을 클릭하여 다양한 메서드들이 뜨니까 원하는 메서드를 사용하면 됩니다.
 
 <br>
@@ -141,7 +142,6 @@ category: Syntax
 	<br>
 
 	3. (선택) 높이를 지정하기 
-
 	```swift
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 100.0
@@ -161,7 +161,7 @@ category: Syntax
 
 ![](https://user-images.githubusercontent.com/77034159/109921253-e9bdce80-7cfe-11eb-831b-28fba918d1fd.gif)
 
-이 화면은 다음과 같이 조금 꾸민 화면 입니다.
+이 화면은 조금 꾸민 화면 인데요. 어떤 코드를 추가했는지 볼까요?
 
 <br>
 
